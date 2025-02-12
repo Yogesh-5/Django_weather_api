@@ -1,0 +1,79 @@
+{% extends 'layouts/app.html' %}
+{% block content %}
+
+
+
+    <div class='row justify-content-center bg-dark text-light'>
+
+        <div class='col-sm-6 mt-5'>
+
+            <h2 class='text-light'>LOGIN</h2>
+
+
+            {% if form.non_field_errors %}
+            <small class="text-danger">
+
+                {{ form.non_field_errors.as_ul }}
+
+            </small>
+            {% endif %}
+            <form method="POST" action="{% url 'login' %}">
+
+                {% csrf_token %}
+                <!-- {{ form.as_p }} -->
+
+
+                
+                <div class="form-group">
+
+                    <label for="{{ form.username.id_for_label }}">Username:</label>
+                    <input type="text" name="{{ form.username.name }}" class="form-control text-dark" placeholder="{{ form.username.value }}">
+                    <span class="text-danger">{{ form.username.errors }}</span>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="{{ form.password.id_for_label }}">Password:</label>
+                    <input type="password" name="{{ form.password.name }}" class="form-control text-dark" placeholder="{{ form.password.value }}">
+                    <span class="text-danger">{{ form.password.errors }}</span>
+                </div>
+
+
+           <!-- <div class="form-group">
+
+                    <label for="{{ form.password2.id_for_label }}">Password-Confirmation:</label>
+                    <input type="password" name="{{ form.password2.name }}" class="form-control" placeholder="{{ form.password2.value }}">
+                    <span class="text-danger">{{ form.password2.errors }}</span>
+                </div>  -->
+
+
+                <button type="submit" class='btn btn-dark'>login
+
+                </button>
+
+                <a href="{% url 'register'%}" class='btn btn-default text-light'>Create a new account</a>
+
+              
+
+
+
+
+
+
+
+
+
+
+            </form>
+            
+
+        </div>
+
+
+    </div>   
+
+
+  
+
+{% endblock %}
