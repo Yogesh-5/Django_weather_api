@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # exit on error
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 python3.12.5 manage.py collectstatic
