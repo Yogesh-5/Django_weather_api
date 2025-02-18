@@ -54,6 +54,7 @@ def dashboard(request):
             add_city = cities.objects.create(city=city)
             add_city.save()
             return redirect('dashboard')
+        
     for city in cities_list:
         get_weather = requests.get(url.format(city)).json()
         print(get_weather)
