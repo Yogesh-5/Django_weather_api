@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    
+    
+
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+
+  .topnav a:nth-child(2){
+    margin-left: 1030px;
+  }
+
+  .animated-text {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    justify-content: center;
+    margin-top: 225px;
+
+  }
+  
+  .letter {
+    opacity: 0;
+    animation: fadeInLetter 0.5s ease forwards;
+    color: white;
+  }
+  
+  .letter:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .letter:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .letter:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .letter:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  .letter:nth-child(5) {
+    animation-delay: 1s;
+  }
+
+  .letter:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+
+  .letter:nth-child(6) {
+    animation-delay: 1.4s;
+  }
+
+  .letter:nth-child(7) {
+    animation-delay: 1.6s;
+  }
+
+  .letter:nth-child(8) {
+    animation-delay: 1.8s;
+  }
+
+  .letter:nth-child(9) {
+    animation-delay: 2s;
+  }
+
+  .letter:nth-child(10) {
+    animation-delay: 2.2s;
+  }
+
+  .letter:nth-child(11) {
+    animation-delay: 2.4s;
+  }
+  .letter:nth-child(12) {
+    animation-delay: 2.6s;
+  }
+
+  .letter:nth-child(13) {
+    animation-delay: 2.8s;
+  }
+
+  .letter:nth-child(14) {
+    animation-delay: 3.0s;
+  }
+  .letter:nth-child(15) {
+    animation-delay: 3.2s;
+  }
+
+  .letter:nth-child(16) {
+    animation-delay: 3.4s;
+  }
+  
+  @keyframes fadeInLetter {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 2;
+    }
+  }
+
+
+
+
