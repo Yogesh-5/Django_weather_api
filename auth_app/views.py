@@ -22,7 +22,7 @@ def register_view(request):
             return redirect('login')
         
     else:
-        initial_data = {'username':'','password1':'','password2':''}
+        initial_data = {'username':'','email':'','password1':'','password2':''}
         form = UserCreationForm(initial = initial_data)
     return render(request, 'auth_app/register.html',{'form':form})    
 
@@ -71,6 +71,7 @@ def dashboard(request):
     context = {'weather_data': weather_data}    
 
 
+# for returning the api weather data
     return render(request, 'dashboard.html', context)
 
 

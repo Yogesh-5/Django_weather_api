@@ -16,15 +16,23 @@
                 <div class="form-group text-light">
 
                     <label for="{{ form.username.id_for_label }}">Username:</label>
-                    <input type="text" name="{{ form.username.name }}" class="form-control text-dark" placeholder="{{ form.username.value }}">
+                    <input type="text" name="{{ form.username.name }}" class="form-control text-dark">
                     <span class="text-danger">{{ form.username.errors }}</span>
                 </div>
 
 
                 <div class="form-group text-light">
 
+                    <label for="{{ form.email.id_for_label }}">Email:</label>
+                    <input type="email" name="{{ form.email.name }}" class="form-control text-dark" required=True>
+                    <span class="text-danger">{{ form.email.errors }}</span>
+                </div>
+
+
+                <div class="form-group text-light">
+
                     <label for="{{ form.password1.id_for_label }}">Password:</label>
-                    <input type="password" name="{{ form.password1.name }}" class="form-control text-dark" placeholder="{{ form.password1.value }}">
+                    <input type="password" name="{{ form.password1.name }}" class="form-control text-dark">
                     <span class="text-danger">{{ form.password1.errors }}</span>
                 </div>
 
@@ -32,7 +40,7 @@
                 <div class="form-group text-light">
 
                     <label for="{{ form.password2.id_for_label }}">Password-Confirmation:</label>
-                    <input type="password" name="{{ form.password2.name }}" class="form-control text-dark" placeholder="{{ form.password2.value }}">
+                    <input type="password" name="{{ form.password2.name }}" class="form-control text-dark">
                     <span class="text-danger">{{ form.password2.errors }}</span>
                 </div>
 
