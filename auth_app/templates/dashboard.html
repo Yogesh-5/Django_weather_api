@@ -75,28 +75,63 @@
                     <div class="line my-5"></div>
 
                     <p>Weather Details</p>
-                    {% for weather in weather_data %}
-                    <p>{{ weather.city }}</p>
-                    <div class="row px-3">
-                        <p class="light-text">Weather</p>
-                        <p class="ml-auto">{{ weather.desc }}</p>
-                    </div>
-                    <div class="row px-3">
-                        <p class="light-text">Humidity</p>
+                    
 
-                        <p class="ml-auto">{{ weather.humidity }}%</p>
-                    </div>
-                    <div class="row px-3">
-                        <p class="light-text">Wind</p>
-                        <p class="ml-auto">{{ weather.speed }}km/hr</p>
-                    </div>
-                    <div class="row px-3">
-                        <p class="light-text">Temperature</p>
-                        <p class="ml-auto">{{ weather.temp }}°C</p>
-                    </div>
+                    {% for weather in weather_data %}
+
+                            {% if weather.city == 'notfound'%}
+
+                            <p>{{ weather.city1 }}</p>
+
+
+                                <div class="row px-3">
+                                    <p class="light-text">Weather</p>
+                                    <p class="ml-auto">Not Found</p>
+                                </div>
+                                <div class="row px-3">
+                                    <p class="light-text">Humidity</p>
+
+                                    <p class="ml-auto">Not Found</p>
+                                </div>
+                                <div class="row px-3">
+                                <p class="light-text">Wind</p>
+                                <p class="ml-auto">Not Found</p>
+                                </div>
+                                <div class="row px-3">
+                                <p class="light-text">Temperature</p>
+                                <p class="ml-auto">Not Found</p>
+                                </div>
+                            
+
+
+                            {% else %}
+
+
+
+
+                                <p>{{ weather.city }}</p>
+                                <div class="row px-3">
+                                    <p class="light-text">Weather</p>
+                                    <p class="ml-auto">{{ weather.desc }}</p>
+                                </div>
+                                <div class="row px-3">
+                                <p class="light-text">Humidity</p>
+
+                                <p class="ml-auto">{{ weather.humidity }}%</p>
+                                </div>
+                                <div class="row px-3">
+                                <p class="light-text">Wind</p>
+                                <p class="ml-auto">{{ weather.speed }}km/hr</p>
+                                </div>
+                                <div class="row px-3">
+                                <p class="light-text">Temperature</p>
+                                <p class="ml-auto">{{ weather.temp }}°C</p>
+                                </div>
 
                     <!-- <div class="line mt-3"></div> -->
+                            {% endif %}
                     {% endfor %}
+                    
                 </div>
             </div>
         </div>

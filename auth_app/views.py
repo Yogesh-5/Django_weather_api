@@ -54,21 +54,27 @@ def dashboard(request):
             add_city = cities.objects.create(city=city)
             add_city.save()
             return redirect('dashboard')
+       
         
     for city in cities_list:
         get_weather = requests.get(url.format(city)).json()
         print(get_weather)
-        weather = {
-            'city':city,
-            'temp': round((get_weather['main']['temp']-273.15),1),
-            'desc': get_weather['weather'][0]['description'],
-            'icon': get_weather['weather'][0]['icon'],
-            'humidity': get_weather['main']['humidity'],
-            'speed': get_weather['wind']['speed']
-        }
+        if get_weather['cod'] == 200:
+
+
+            weather = {
+                'city':city,
+                'temp': round((get_weather['main']['temp']-273.15),1),
+                'desc': get_weather['weather'][0]['description'],
+                'icon': get_weather['weather'][0]['icon'],
+                'humidity': get_weather['main']['humidity'],
+                'speed': get_weather['wind']['speed']
+            }
+        else:
+            weather = {'city':'notfound','city1':city}
 
         weather_data.append(weather)
-    context = {'weather_data': weather_data}    
+    context = {'weather_data': weather_data}   
 
 
 # for returning the api weather data
