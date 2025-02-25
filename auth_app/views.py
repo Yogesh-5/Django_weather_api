@@ -45,7 +45,7 @@ def login_view(request):
 @auth
 def dashboard(request):
 
-    url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=f9861a93fcc63260924ff6b0c1981462'
+    url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=6066da2792033ca1ff12845d50d5281b'
     weather_data = []
     cities_list = cities.objects.all() 
     if request.method == 'POST':
